@@ -29,6 +29,8 @@ class MainActivity : AppCompatActivity() {
 
         sayHelloButton.setOnClickListener {
 
+            // resources.getDrawable(R.drawable.pzn, theme)
+
             Log.d("PZN", "This is debug log")
             Log.i("PZN", "This is info log")
             Log.w("PZN", "This is warn log")
