@@ -9,7 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="Nama:"/>
+        android:text="@string/nameEditText"/>
 
     <EditText
         android:id="@+id/nameEditText"
@@ -22,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="Say Hello"/>
+        android:text="@string/sayHelloButton"/>
 
     <TextView
         android:id="@+id/sayHelloTextView"

@@ -35,7 +35,11 @@ class MainActivity : AppCompatActivity() {
             Log.e("PZN", "This is error log")
 
             val name = nameEditText.text.toString()
-            sayHelloTextView.text = "Hi $name"
+            sayHelloTextView.text = resources.getString(R.string.sayHelloTextView, name)
+
+            resources.getStringArray(R.array.names).forEach {
+                Log.i("PZN", it)
+            }
         }
     }
 }
