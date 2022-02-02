@@ -29,6 +29,12 @@ class MainActivity : AppCompatActivity() {
 
         sayHelloButton.setOnClickListener {
 
+            val json = assets.open("sample.json")
+                .bufferedReader()
+                .use { it.readText() }
+
+            Log.i("ASSET", json)
+
             // resources.getDrawable(R.drawable.pzn, theme)
 
             Log.d("PZN", "This is debug log")
