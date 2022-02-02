@@ -29,6 +29,11 @@ class MainActivity : AppCompatActivity() {
 
         sayHelloButton.setOnClickListener {
 
+            val sample = resources.openRawResource(R.raw.sample)
+                .bufferedReader()
+                .use { it.readText() }
+            Log.i("RAW", sample)
+
             val json = assets.open("sample.json")
                 .bufferedReader()
                 .use { it.readText() }
