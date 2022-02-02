@@ -1,5 +1,7 @@
 package programmerzamannow.belajarandroiddasar
 
+import android.content.pm.PackageManager
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -19,6 +21,21 @@ class MainActivity : AppCompatActivity() {
         sayHelloTextView = findViewById(R.id.sayHelloTextView)
     }
 
+    private fun checkFingerprint(){
+        if(packageManager.hasSystemFeature(PackageManager.FEATURE_FINGERPRINT)){
+            Log.i("FEATURE", "Feature Fingerprint ON")
+        }else{
+            Log.w("FEATURE", "Feature Fingerprint OFF")
+        }
+    }
+
+    private fun checkPlatformVersion(){
+        Log.i("SDK", Build.VERSION.SDK_INT.toString())
+        if(Build.VERSION.SDK_INT < Build.VERSION_CODES.S){
+            Log.i("SDK", "Disabled feature, because version sdk is lower than 31")
+        }
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.hello_world)
@@ -28,6 +45,9 @@ class MainActivity : AppCompatActivity() {
         sayHelloTextView.text = resources.getString(R.string.app_name)
 
         sayHelloButton.setOnClickListener {
+
+            checkFingerprint()
+            checkPlatformVersion()
 
             val sample = resources.openRawResource(R.raw.sample)
                 .bufferedReader()

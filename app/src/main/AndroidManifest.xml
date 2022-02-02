@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="programmerzamannow.belajarandroiddasar">
 
+    <uses-feature android:name="android.hardware.fingerprint" android:required="true"/>
+
     <application
         android:name=".MyApplication"
         android:allowBackup="true"
