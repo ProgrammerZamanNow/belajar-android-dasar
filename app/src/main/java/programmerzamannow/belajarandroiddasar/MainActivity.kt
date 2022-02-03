@@ -36,6 +36,10 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    private fun printHello(name: String){
+        Log.i("DEBUG", name)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.hello_world)
@@ -45,6 +49,9 @@ class MainActivity : AppCompatActivity() {
         sayHelloTextView.text = resources.getString(R.string.app_name)
 
         sayHelloButton.setOnClickListener {
+
+            val firstName = "Eko"
+            printHello(firstName)
 
             checkFingerprint()
             checkPlatformVersion()
