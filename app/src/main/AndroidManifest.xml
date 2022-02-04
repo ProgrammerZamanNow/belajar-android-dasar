@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BelajarAndroidDasar">
         <activity
-            android:name=".MainActivity"
+            android:name=".GameActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
